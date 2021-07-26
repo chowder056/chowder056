@@ -1,0 +1,6 @@
+django == 3.1.2
+django-rest-framework
+pillow
+django-crispy-forms
+pymysql
+requests

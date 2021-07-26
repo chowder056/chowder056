@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+<br>
+    <table class="table" >
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Chiste</th>
+            <th scope="col">Respuesta</th>
+
+          </tr>
+        </thead>
+        <tbody>
+            {% for c in chistes %}
+          <tr>
+              <td>{{ forloop.counter }}</td>
+            <td>{{c.chiste}}</td>
+            <td>{{c.resp}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+{% endblock %}

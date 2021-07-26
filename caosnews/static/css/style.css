@@ -1,0 +1,158 @@
+h1{
+  color: rgb(83, 83, 83);
+  font-style: italic;
+  font-size: xx-large;
+}
+ class1{
+   color: cadetblue;
+ }
+
+ p{
+   color: rgb(0, 0, 0);
+   
+   width: auto;
+   font-size: auto;
+   margin-right: auto;
+   margin-left: auto;
+  }
+
+ h5{
+   color:darkblue;
+ }
+
+ .carousel-item img
+ {
+  margin-right: auto;
+  margin-left: auto;
+   height: 500px;
+   width: 1000px;
+ }
+ /*ajustar la imagen de fondo*/
+body{
+      background-image: url("imagenes\unknown.png"); 
+      background-position: center center;
+      background-repeat:no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-color: rgb(255, 255, 255);
+}
+/*ajustar tamaño carousel*/
+.carousel-inner{
+  margin-right: auto;
+  margin-left: auto;
+  height:500px;
+  width: 1000px,auto;
+  
+}
+
+.mb-3{
+
+  margin-right: auto;
+  margin-left: auto;
+  width: 1000px;
+ 
+
+}
+ 
+.img{
+  margin-right: auto;
+  margin-left: auto;
+  width: auto;
+}
+
+
+
+ diseño pagina
+.list-group{
+  
+  width: 1200px;
+  
+}
+
+.container{
+
+  margin-right: auto;
+  margin-left: auto;
+  width: 1000px;
+}
+.row{
+  margin-right: auto;
+  margin-left: auto;
+  
+  width: 1000px;
+  
+}
+
+.clo{
+  margin-right: auto;
+  margin-left: auto;
+  width: 1000px;
+
+}
+
+.form-control{
+
+  width: 250px; 
+
+}
+
+.form-label{
+  width: 200px; 
+
+}
+
+.col-md-6{
+  width: 100px; 
+
+}
+
+.list-group-item{
+  margin-right: auto;
+  margin-left: auto;
+  width:1000px;
+}
+
+.form-control{
+  width:500px;
+}
+
+.validationDefault07{
+  width:1000px;
+}
+
+.categorias{
+  margin-right: auto;
+  margin-left: auto;
+  width:auto;
+}
+
+.modal{
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+
+.carousel-inner-1{
+  margin-right: auto;
+  margin-left: auto;
+  height:10px;
+  width:1000px;
+}
+
+#video, video{
+  margin: auto;
+  padding-top: 40px;
+  width: 350px;
+  height: 250px;
+}
+
+#video, video{
+  margin-left: auto;
+  margin-right: auto;
+  height:10px;
+  width:100px;
+}
+
+
+
+

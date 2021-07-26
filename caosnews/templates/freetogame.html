@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+<br>
+    <table class="table" >
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre juego</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Caratula</th>
+            <th scope="col">Plataforma</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for c in games %}
+          <tr>
+            <th scope="row">{{c.id}}</th>
+            <td>{{c.title}}</td>
+            <td>{{c.short_description}}</td>
+            <td>{{c.genre}}</td>
+            <td><img src="{{c.thumbnail}}" height="100" width="150" ></td>
+            <td>{{c.platform}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+{% endblock %}

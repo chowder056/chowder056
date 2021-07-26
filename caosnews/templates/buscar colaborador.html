@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.min.css" >
+<!--conexion a css-->
+<link type="text/css" rel="stylesheet" href="CSS/style.css">   
+
+
+
+
+<div class="container">
+    <table class="table table-stripped" id="ListarUsuarios">
+        <thead>
+         <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Correo</th>
+          <th scope="col">Rut</th>
+       
+         </tr> 
+        </thead>
+        <tbody>
+          {% for g in colaboradores %}
+            <tr>
+              <form method="post" action="">
+                <td>{{ g.nombre_caosnews }}</td>
+                <td>{{ g.apellido_caosnews }}</td>
+                <td>{{g.correo_caosnews}}</td>
+                <td>{{g.rut}}</td>
+              </form>
+            </tr>
+          {% endfor %}
+        </tbody>
+     </table>
+</div>
+
+<div class="container">
+    <h1>Buscar colaborador por nombre</h1>
+    <form method="post" action="/buscarColaboradorNombre" >
+        {% csrf_token %}
+    <label for="nombre">Nombre </label>
+    <br>
+    <input type="text" id="nombre" name="nombre" required>
+    <br>
+    <br>
+    <button type=submit class="btn btn-info">Buscar</button>
+    </form>
+    
+</div> 
+<br>
+
+<div class="container">
+    <h1>Buscar colaborador por rut</h1>
+    <form action="/buscarColaboradorRut" method="post">
+        {% csrf_token %}
+    <label for="rut">RUT </label>
+    <br>
+    <input type="text" id="rut" name="rut" required>
+    <br>
+    <br>
+    <button type=submit class="btn btn-info">Buscar</button>
+</form>
+    
+</div> 
+
+
+
+
+
+
+
+
+
+<script src="{% static 'JQuery/jquery-3.5.1.min.js' %}"></script>
+<script src="{% static 'bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js' %}" ></script>
+
+<script>
+$.get('https://www.el-tiempo.net/api/json/v2/home',function(data){
+$.appendTo("p5")
+});
+
+</script>
+<script>
+$( document ).ready(function() {
+
+  $("#mostrar").click(function(){
+      $('#ListarUsuarios').toggle(1000,function() {
+
+      });
+  });
+});
+</script>
+
+
+
+
+{% endblock %}

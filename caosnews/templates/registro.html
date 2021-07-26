@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.min.css" >
+    <!--conexion a css-->
+    <link type="text/css" rel="stylesheet" href="CSS/style.css">   
+  <br>
+  <div class="container">
+    
+
+    <form method="post" action="" id="fromulario">
+      {% csrf_token %}
+      <div class="form-group input-group-sm" >
+      <label>Nombre Usuario :</label>
+      {{ form.nombre_caosnews }}
+      <br>
+      <label>Apellido Usuario :</label>
+      {{ form.apellido_caosnews }}
+      <br>
+      <label>Correo :</label>
+      {{ form.correo_caosnews }}
+      <br>
+      <label>Contraseña :</label>
+      {{ form.contraseña_caosnews}}
+      <br>
+      <label>Confirmar Contraseña :</label>
+      {{ form.con_contraseña_caosnews }}
+      <br>
+      <label>Rut :</label>
+      {{ form.rut }}
+      <br>
+      <label>Pais :</label>
+      {{ form.pais }}
+      <br>
+      <label>Direccion :</label>
+      {{ form.direccion }}
+      </div>
+      
+      
+      <input type="submit" class="btn btn-danger" name="Agregar" id="enviar" value="Enviar">
+      <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+      <div id="error" class="alert alert-danger" role="alert"></div>
+   
+    </form>
+ 
+  </div>
+
+    <div class="col-0">  
+      <center><br>
+      <button type="button" class="btn btn-info  my-2 my-sm-0" id='mostrar' >Usuarios Activos</button>
+      </center><br>
+      <table class="table table-stripped" id="ListarUsuarios">
+        <thead>
+         <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Correo</th>
+          <th scope="col">Rut</th>
+          <th scope="col">Pais</th>
+          <th scope="col">Direccion</th>
+          <th scope="col">Contraseña</th>
+          <th scope="col">Confirmar Contraseña</th>
+       
+         </tr> 
+        </thead>
+        <tbody>
+          {% for g in caosU %}
+            <tr>
+              <form method="post" action="">
+                {% csrf_token %}
+                <td><input type="text" name="id" id="id" value="{{ g.id }}" readonly></td>
+                <td><input type="text" id="id_nombre_caosnews" name="nombre_caosnews" value="{{ g.nombre_caosnews }}"> </td>
+                <td><input type="text" id="id_apellido_caosnews" name= "apellido_caosnews" value="{{ g.apellido_caosnews }}"> </td>
+                <td><input type="text" id="id_correo_caosnews" name= "correo_caosnews" value="{{ g.correo_caosnews }} "></td>
+                <td><input type="text" id="id_rut" name="rut" value="{{g.rut}}" maxlength="12"></td>
+                <td><input type="text" id="id_pais" name= "pais" value="{{ g.pais }} "></td>
+                <td><input type="text" id="id_direccion" name= "direccion" value="{{ g.direccion }} "></td>
+                <td><input type="text" id="id_contraseña_caosnews" name="contraseña_caosnews" value="{{g.contraseña_caosnews}}"></td>
+                <td><input type="text" id="id_con_contraseña_caosnews" name="con_contraseña_caosnews" value="{{g.con_contraseña_caosnews}}"></td>
+                <td><input class="btn btn-primary" type="submit" name="Editar" value="Editar"></td>
+                <td><input class="btn btn-primary" type="submit" name="Eliminar" value="Eliminar"></td>
+              </form>
+            </tr>
+          {% endfor %}
+        </tbody>
+     </table>
+    </div>
+  <script src="{% static 'JQuery/jquery-3.5.1.min.js' %}"></script>
+  <script src="{% static 'bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js' %}" ></script>
+
+ <script>
+  $.get('https://www.el-tiempo.net/api/json/v2/home',function(data){
+  $.appendTo("p5")
+  });
+  
+  </script>
+  <script>
+  $( document ).ready(function() {
+  
+    $("#mostrar").click(function(){
+        $('#ListarUsuarios').toggle(1000,function() {
+  
+        });
+    });
+  });
+  </script>
+
+
+
+
+
+
+{% endblock %}

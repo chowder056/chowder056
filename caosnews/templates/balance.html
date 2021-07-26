@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+  <body>
+    <center>
+    <div id="video">
+      <video controls width="1050" height="850px" autoplay> 
+        <source src="{% static 'video/video.mp4' %}" type="video/mp4">
+      </video>
+
+
+    </div>
+  </center>
+
+
+
+  </body>
+  <script src="{% static 'JQuery/jquery-3.5.1.min.js' %}"></script>
+  <script src="{% static 'bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js' %}" ></script>
+
+
+  {% endblock %}
+
+
+
+    

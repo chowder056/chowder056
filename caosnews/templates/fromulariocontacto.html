@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.min.css" >
+    <!--conexion a css-->
+    <link type="text/css" rel="stylesheet" href="CSS/style.css">   
+    <title>Caos News</title>
+   
+  </head>
+  <body>
+    <!--nav bar-->
+    <nav  class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="C:\Users\Kiwi\Desktop\evalucion 1 diseño web\pagina1.html">Inicio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categorias
+            </a>
+            <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="cate.pandemia.html">Pandemia</a>
+              <a class="dropdown-item" href="cate.deportes.html">Deporte</a>
+              <a class="dropdown-item" href="cate.internacional.html">Internacional</a>
+              <a class="dropdown-item" href="cate.finanzas.html">Finanzas</a>
+            </div>
+          </li>
+
+          
+
+          <li class="nav-item active">
+            <a class="nav-link" href="C:\Users\Kiwi\Desktop\evalucion 1 diseño web\fromulariocontacto.html">Contacto <span class="sr-only">(current)</span></a>
+          </li>
+
+
+          <div id="carouselExampleFade"  class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner-1">
+              <div class="form-row">
+              <div class="carousel-item active">
+                <p1 align="right" scope="col" ></p>
+              </div>
+              <div class="carousel-item">
+                <p2 align="right" scope="col" ></p>
+              </div>
+              <div class="carousel-item">
+                <p3 align="right" scope="col" ></p>
+              </div>
+              <div class="carousel-item">
+                <p4 align="right" scope="col" ></p>
+              </div>
+            </div>
+           </div>
+          </div>
+
+
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busqueda</button>
+        </form>
+
+      </ul>
+      <button type="button" class="btn btn-success my-2 my-lg-0" style="margin:10px " data-toggle="modal" data-target="#exampleModal">
+        Registrar
+    </button>
+    </div>
+      </div>
+    </nav>
+      <!--fin navbar-->
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <br>
+        <!--<button type="button" class="btn btn-primary">Enviar</button>--->
+        
+        <a href="C:\Users\Kiwi\Desktop\evalucion 1 diseño web\recepcion.html" class="btn btn-success">Enviar</a>
+        
+    </div>
+
+          <!--formulario-->  
+      
+          <div class="modal fade" style=" background-position: center center;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">   
+            <div class="modal-dialog modal-dialog-centered modal-lg"style= "width: auto">
+              <div class="container-fluid">
+                <form class="needs-validation" onsubmit="return validar(this)" novalidate>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        
+                        
+                            <div class="form-row">
+                              
+                                <div class="col-md-8 ">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" style= "width: auto" class="form-control" id="nombre" placeholder="Ingrese nombre" value="" required>
+                                    <div class="valid-feedback">
+                                        Correcto
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Incorrecto
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-8 ">
+                                    <label for="apellido">Apellido</label>
+                                    <input type="text"style= "width: auto" class="form-control" id="apellido" placeholder="Ingrese apellido" value="" required>
+                                    <div class="valid-feedback">
+                                        Correcto
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Incorrecto
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-8 ">
+                                    <label for="usuario">Usuario</label>
+                                    <input type="text"style= "width: auto" class="form-control" id="usuario" placeholder="Ingrese usuario" value="" required>
+                                    <div class="valid-feedback">
+                                        Correcto
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Incorrecto
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+                            <div class="form-row">
+    
+                                <div class="col-md-8 ">
+                                    <label for="Correo">Correo</label>
+                                    <input type="text" style= "width: auto"class="form-control" id="correo" placeholder="Ingrese Correo" value="" required>
+                                    <div class="valid-feedback">
+                                        Correcto
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Incorrecto
+                                    </div>
+                                </div>
+
+                                <div class="col-md-8 ">
+                                  <label for="Correo2">Confirme correo</label>
+                                  <input type="text" style= "width: auto"class="form-control" id="correo2" placeholder="Ingrese Correo" value="" required>
+                                  <div class="valid-feedback">
+                                      Correcto
+                                  </div>
+                                  <div class="invalid-feedback">
+                                      Incorrecto
+                                  </div>
+                              </div>
+    
+                                <div class="col-md-8 ">
+                                    <label for="tipo">Region</label>
+                                    <select class="custom-select"  id="tipo" required>
+                                        <option selected disabled value="">Seléccione Región</option>
+                                        <option> I Región de Tarapacá </option>
+                                        <option> II Región de Antofagasta </option>
+                                        <option> III Región de Atacama </option>
+                                        <option> IV Región de Coquimbo </option>
+                                        <option> V Región de Valparaíso </option>
+                                        <option> VI Región del Libertador General B.O </option>
+                                        <option> VII Región del Maule </option>
+                                        <option> VIII Región del Biobío </option>
+                                        <option> IX Región de La Araucanía </option>
+                                        <option> X Región de Los Lagos </option>
+                                        <option> XI Región Aysén del General C.I.C </option>
+                                        <option> XII Región de Magallanes y Antártica Chilena </option>
+                                        <option> XIIRegión Metropolitana de Santiago </option>
+                                        <option> XIV Región de Los Ríos </option>
+                                        <option> XV Región de Arica y Parinacota </option>
+                                        <option> XVI Región de Ñuble </option>
+                                    </select>
+                                    <div class="valid-feedback">
+                                        Correcto
+                                    </div>
+                                    <div class="invalid-feedback">
+                                         Seleccione una opcion valida
+                                    </div>
+                                </div>
+                              </div>
+    
+    
+                           
+    
+                            <div class="form-group">
+                              <div class="form-check">
+                                <input class="form-check-input" style= "width: auto"type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                  Acepta las condiciones
+                                </label>
+                                <div class="invalid-feedback">
+                                  No acepta
+                                </div>
+                              </div>
+                            </div>
+    
+    
+                            
+                            <div class="modal-footer">
+                              <button type="button" style= "width: auto" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                              <button type="submit"  style= "width: auto" class="btn btn-primary">Registrar</button>
+                          </div>
+                      </div>
+                      </form> 
+                  </div>    
+          </div>>
+    
+    
+    
+             <!--fin formulario-->
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="JQuery/jquery-3.5.1.min.js"></script>
+    <script src="bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js" ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+              }, false);
+          });
+          }, false);
+      })();
+      </script>
+
+
+
+    <script>
+      function validar( f ){
+          var correcto = true;
+          var mensaje = "Campos vacios:";
+
+          if(f.elements.nombre.value==""){//nombre
+              correcto = false;
+              mensaje = mensaje + "-Nombre";
+          }
+
+          if(f.elements.apellido.value==""){
+              correcto = false;
+              mensaje = mensaje + "-Apellido";
+          }
+
+          if(f.elements.usuario.value=="" ){
+              correcto = false;
+              mensaje = mensaje + "-Usuario";
+          }
+
+          if(f.elements.correo.value=="" ){
+              correcto = false;
+              mensaje = mensaje + "-Correo";
+          }
+
+          if(f.elements.correo2.value=="" ){
+              correcto = false;
+              mensaje = mensaje + "-Confirmación correo";
+          }
+
+          if(f.elements.tipo.value=="" ){
+              correcto = false;
+              mensaje = mensaje + "-Región";
+          }
+
+          if(correcto==false){
+              alert(mensaje);
+          }
+
+          return correcto;
+
+      }
+  </script>
+
+   
+<script>
+
+  $.get('https://mindicador.cl/api', function(data) {
+    var dailyIndicators = data;
+    $("<p/>", {
+        html: 'El valor de UF es $' + dailyIndicators.uf.valor
+    }).appendTo("p1");
+  }).fail(function() {
+    console.log('Error al consumir la API!');
+  });
+  </script>
+  
+  <script type="text/javascript" >
+          $.get('https://mindicador.cl/api', function (data) {
+              var dailyIndicators = data;
+              $("<p/>", {
+                  html: 'El valor de UTM es $' + dailyIndicators.utm.valor
+              }).appendTo("p2");
+          }).fail(function() {
+              console.log('Error al consumir la API!');
+          });
+          </script>
+  
+          <script type="text/javascript" > 
+          $.get('https://mindicador.cl/api', function(data) {
+              var dailyIndicators = data;
+              $("<p/>", {
+                  html: 'El valor de la Libra de cobre es $' + dailyIndicators.libra_cobre.valor
+              }).appendTo("p3");
+          }).fail(function() {
+              console.log('Error al consumir la API!');
+          });
+           </script>
+  
+          <script type="text/javascript" >  
+          $.get('https://mindicador.cl/api', function(data) {
+              var dailyIndicators = data;
+              $("<p/>", {
+                  html: 'El valor del Dolar es $' + dailyIndicators.dolar.valor
+              }).appendTo("p4");
+          }).fail(function() {
+              console.log('Error al consumir la API!');
+          });
+  
+  </script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

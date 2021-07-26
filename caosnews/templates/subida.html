@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+    <form method="POST">
+        {% csrf_token %}
+        <br>
+        <input type="text"name="chiste" class="offset-md-4 col-4">
+        <br>
+        <br>
+        <input type="text"name="resp" class="offset-md-4 col-4">
+        <br>
+        <br>
+        <input type="submit" class="btn btn-success offset-md-4 col-4" >
+    </form>
+{% endblock %}

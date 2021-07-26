@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+    <br>
+    <h1 align="center">Caos News </h1>
+    <div class="container">
+    </div>
+    <br>
+    <!--carrusel -->
+    
+    <div align="center"
+         id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1" ></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="/bono_covid/"> <img src="{% static 'imagenes/bono covid abril.PNG' %}" class="img-fluid" alt="first slide"></a>
+              <div class="carousel-caption d-none d-md-block">
+              <h5>Bono Covid Abril</h5>                                                    
+            
+                
+              <div class="col-sm-12"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <a href="/coronavac/"><img src="{% static 'imagenes\coronavac.PNG' %}"class="img-fluid" alt="second slide"></a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Coronavac</h5>
+             
+
+              <div class="col-sm-12"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <a href ="/iran_acusa_israel/"><img src="{% static 'imagenes\iran acusa a israel.PNG' %}"class="img-fluid" alt="second slide"></a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Iran acusa a Israel</h5>
+              
+              <div class="col-sm-12"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--fin carrusel-->
+      <!--contenido pag-->
+      <div class="container"  align="center"></div>
+       <div class="img-fluid">
+         <br>
+         <center>
+          <img  src="{% static 'imagenes\covid3.PNG' %}"   class="img-fluid" alt="...">
+          <br>
+ 
+         <p >
+          Esta página fue creada para reemplazar los métodos clásicos de noticieros y crear <br>
+          una alternativa que sea accesible para los usuarios de esta aplicación en todo momento.<br>
+        </p>
+      </center>
+
+        
+       </div>
+      </div>
+    </div>
+    <!--contenido pag-->
+    <!--pie de pagina-->
+
+    <!--pie de pagina-->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="{% static 'JQuery/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js' %}" ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+
+
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+              }, false);
+          });
+          }, false);
+      })();
+      </script>
+
+
+
+    <script>
+      function validar( f ){
+          var correcto = true;
+          var mensaje = "Campos vacios:";
+
+          if(f.elements.nombre.value==""){//nombre
+              correcto = false;
+              mensaje = mensaje + "-Nombre";
+          }
+
+          if(f.elements.apellido.value==""){
+              correcto = false;
+              mensaje = mensaje + "-Apellido";
+          }
+
+          if(f.elements.usuario.value=="" ){
+              correcto = false;
+              mensaje = mensaje + "-Usuario";
+          }
+
+          if(f.elements.correo.value=="" ){
+              correcto = false;
+              mensaje = mensaje + "-Correo";
+          }
+
+          if(f.elements.correo2.value=="" ){
+              correcto = false;
+              mensaje = mensaje + "-Confirmación correo";
+          }
+
+          if(f.elements.tipo.value=="" ){
+              correcto = false;
+              mensaje = mensaje + "-Región";
+          }
+
+          if(correcto==false){
+              alert(mensaje);
+          }
+
+          return correcto;
+
+      }
+  </script>
+
+<script>
+
+$.get('https://mindicador.cl/api', function(data) {
+  var dailyIndicators = data;
+  $("<p/>", {
+      html: 'El valor de UF es $' + dailyIndicators.uf.valor
+  }).appendTo("p1");
+}).fail(function() {
+  console.log('Error al consumir la API!');
+});
+</script>
+
+<script type="text/javascript" >
+        $.get('https://mindicador.cl/api', function (data) {
+            var dailyIndicators = data;
+            $("<p/>", {
+                html: 'El valor de UTM es $' + dailyIndicators.utm.valor
+            }).appendTo("p2");
+        }).fail(function() {
+            console.log('Error al consumir la API!');
+        });
+        </script>
+
+        <script type="text/javascript" > 
+        $.get('https://mindicador.cl/api', function(data) {
+            var dailyIndicators = data;
+            $("<p/>", {
+                html: 'El valor de la Libra de cobre es $' + dailyIndicators.libra_cobre.valor
+            }).appendTo("p3");
+        }).fail(function() {
+            console.log('Error al consumir la API!');
+        });
+         </script>
+
+        <script type="text/javascript" >  
+        $.get('https://mindicador.cl/api', function(data) {
+            var dailyIndicators = data;
+            $("<p/>", {
+                html: 'El valor del Dolar es $' + dailyIndicators.dolar.valor
+            }).appendTo("p4");
+        }).fail(function() {
+            console.log('Error al consumir la API!');
+        });
+
+</script>
+<script>
+$.get('https://www.el-tiempo.net/api/json/v2/home',function(data){
+$.appendTo("p5")
+});
+
+</script>
+
+<script>
+$.get('https://www.el-tiempo.net/api/json/v2/home',function(data){
+$.appendTo("p5")
+});
+
+</script>
+<script>
+$( document ).ready(function() {
+
+  $("#mostrar").click(function(){
+      $('#ListarUsuarios').toggle(1000,function() {
+
+      });
+  });
+});
+</script>
+
+
+{% endblock %}
+
+

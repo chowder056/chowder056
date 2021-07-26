@@ -1,0 +1,104 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap-4.6.0-dist/css/bootstrap.min.css' %}" >
+    <!--conexion a css-->
+    <link type="text/css" rel="stylesheet" href="{% static 'CSS/style.css' %}">   
+    <title>Caos News</title>
+    <link rel="shortcut icon" href="{% static 'imagenes/1.png' %}">
+  </head>
+
+
+  <body>
+    <!--nav bar-->
+    <nav  class="navbar navbar-expand-lg navbar-light bg-company-light" style="background-color: rgb(164, 177, 175);">
+      <a class="navbar-brand" href="/">Inicio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Secciones
+            </a>
+            <div class="dropdown-menu " aria-labelledby="navbarDropdown"style="background-color: rgb(164, 177, 175);">
+              <a class="dropdown-item" href="/pandemia/ ">Pandemia</a>
+              <a class="dropdown-item" href="/deporte/ ">Deporte</a>
+              <a class="dropdown-item" href="/internacional/">Internacional</a>
+              <a class="dropdown-item" href="/finanzas/">Finanzas</a>
+              <a class="dropdown-item" href="/juegosf2p/">Entretencion</a>
+              <a class="dropdown-item" href="/lista_chiste/">Chistes</a>
+            </div>
+          </li>
+          <a class="navbar-brand" href="/balance/">Balance</a>
+          <a class="navbar-brand" href="/chiste/">subir chiste</a>
+          <a class="navbar-brand" href="/buscarColaborador">Buscar colaborador</a>
+          
+
+          <p class="navbar-brand">Temp min: {{clima.tempmin}}</p>
+          <p class="navbar-brand">Temp max: {{clima.tempmax}}</p>
+          
+         
+          
+        
+          
+
+          <!--prueba-->
+          
+          
+            <div id="carouselExampleFade"  class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner-1">
+              <div class="form-row">
+              <div class="carousel-item active">
+                <p1 align="center" scope="col" ></p>
+              </div>
+              <div class="carousel-item">
+                <p2 align="center" scope="col" ></p>
+              </div>
+              <div class="carousel-item">
+                <p3 align="center" scope="col" ></p>
+              </div>
+              <div class="carousel-item">
+                <p4 align="center" scope="col" ></p>
+              </div>
+            </div>
+           </div>
+          </div>
+          
+
+
+          <!--prueba-->
+          
+      </ul>
+      <a class="navbar-brand" href="/contactanos/">Conócenos</a>
+      
+      <a href="/registro/"type="button" class="btn btn-success my-2 my-lg-0" style="margin:10px " >Registrar</a>
+    
+    </div>
+      </div>
+    </nav> 
+    <div>
+        {% block contenido %}
+
+        {% endblock %}
+    </div>
+
+    <script>
+      $(document).ready(function(){
+        $('.carousel').carousel({
+          interval: 5000
+        });
+      });
+    </script>
+</body>
+</html>
+  

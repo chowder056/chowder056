@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.min.css" >
+    <!--conexion a css-->
+    <link type="text/css" rel="stylesheet" href="CSS/style.css">   
+    <title>Caos News</title>
+   
+  </head>
+  <body>
+    <!--nav bar-->
+    <nav  class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="C:\Users\Kiwi\Desktop\evalucion 1 diseño web\pagina.html">Inicio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categorias
+            </a>
+            <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="cate.pandemia.html">Pandemia</a>
+              <a class="dropdown-item" href="cate.deportes.html">Deporte</a>
+              <a class="dropdown-item" href="cate.internacional.html">Internacional</a>
+              <a class="dropdown-item" href="cate.finanzas.html">Finanzas</a>
+            </div>
+          </li>
+
+          
+
+          <li class="nav-item active">
+            <a class="nav-link" href="C:\Users\Kiwi\Desktop\evalucion 1 diseño web\fromulariocontacto.html">Contacto <span class="sr-only">(current)</span></a>
+          </li>
+
+
+
+          <div id="carouselExampleFade"  class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner-1">
+              <div class="form-row">
+              <div class="carousel-item active">
+                <p1 align="right" scope="col" ></p>
+              </div>
+              <div class="carousel-item">
+                <p2 align="right" scope="col" ></p>
+              </div>
+              <div class="carousel-item">
+                <p3 align="right" scope="col" ></p>
+              </div>
+              <div class="carousel-item">
+                <p4 align="right" scope="col" ></p>
+              </div>
+            </div>
+           </div>
+          </div>
+
+
+
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busqueda</button>
+        </form>
+
+      </ul>
+      <button type="button" class="btn btn-success my-2 my-lg-0" style="margin:10px " data-toggle="modal" data-target="#exampleModal">
+        Registrar
+    </button>
+    </div>
+      </div>
+    </nav>
+    <!--fin navbar-->
+        <!--loggin-->
+        
+
+        
+        
+        <div id="login">
+        <h1>Logueo</h1>
+        <form name="loginform" id="loginform" action="" method="POST" >
+        <p>
+        <label for="user_login">Nombre De Usuario<br />
+        <input type="text" name="username" id="username" class="input" value="" size="20" /></label>
+        </p>
+        <p>
+        <label for="user_pass">Contraseña<br />
+        <input type="password" name="password" id="password" class="input" value="" size="20" /></label>
+        </p>
+        <p class="submit">
+          <a href="Bienvenida.html" class="btn btn-success">Entrar</a>
+        </p>
+        <p class="regtext">No estas registrado? <a href="C:\Users\Kiwi\Desktop\evalucion 1 diseño web\Registro.html" >Registrate Aquí</a>!</p>
+        </form>
+        
+        </div>
+        
+        
+        
+
+        
+       
+            <!--loggin-->
+
+              <!--formulario-->  
+      
+      <div class="modal fade" style=" background-position: center center;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">   
+        <div class="modal-dialog modal-dialog-centered modal-lg"style= "width: auto">
+          <div class="container-fluid">
+            <form class="needs-validation" onsubmit="return validar(this)" novalidate>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                    
+                        <div class="form-row">
+                          
+                            <div class="col-md-8 ">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" style= "width: auto" class="form-control" id="nombre" placeholder="Ingrese nombre" value="" required>
+                                <div class="valid-feedback">
+                                    Correcto
+                                </div>
+                                <div class="invalid-feedback">
+                                    Incorrecto
+                                </div>
+                            </div>
+
+                            <div class="col-md-8 ">
+                                <label for="apellido">Apellido</label>
+                                <input type="text"style= "width: auto" class="form-control" id="apellido" placeholder="Ingrese apellido" value="" required>
+                                <div class="valid-feedback">
+                                    Correcto
+                                </div>
+                                <div class="invalid-feedback">
+                                    Incorrecto
+                                </div>
+                            </div>
+
+                            <div class="col-md-8 ">
+                                <label for="usuario">Usuario</label>
+                                <input type="text"style= "width: auto" class="form-control" id="usuario" placeholder="Ingrese usuario" value="" required>
+                                <div class="valid-feedback">
+                                    Correcto
+                                </div>
+                                <div class="invalid-feedback">
+                                    Incorrecto
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="col-md-8 ">
+                                <label for="Correo">Correo</label>
+                                <input type="text" style= "width: auto"class="form-control" id="correo" placeholder="Ingrese Correo" value="" required>
+                                <div class="valid-feedback">
+                                    Correcto
+                                </div>
+                                <div class="invalid-feedback">
+                                    Incorrecto
+                                </div>
+                            </div>
+
+                            <div class="col-md-8 ">
+                                <label for="tipo">Region</label>
+                                <select class="custom-select"  id="tipo" required>
+                                    <option selected disabled value="">Seléccione Región</option>
+                                    <option> I Región de Tarapacá </option>
+                                    <option> II Región de Antofagasta </option>
+                                    <option> III Región de Atacama </option>
+                                    <option> IV Región de Coquimbo </option>
+                                    <option> V Región de Valparaíso </option>
+                                    <option> VI Región del Libertador General B.O </option>
+                                    <option> VII Región del Maule </option>
+                                    <option> VIII Región del Biobío </option>
+                                    <option> IX Región de La Araucanía </option>
+                                    <option> X Región de Los Lagos </option>
+                                    <option> XI Región Aysén del General C.I.C </option>
+                                    <option> XII Región de Magallanes y Antártica Chilena </option>
+                                    <option> XIIRegión Metropolitana de Santiago </option>
+                                    <option> XIV Región de Los Ríos </option>
+                                    <option> XV Región de Arica y Parinacota </option>
+                                    <option> XVI Región de Ñuble </option>
+                                </select>
+                                <div class="valid-feedback">
+                                    Correcto
+                                </div>
+                                <div class="invalid-feedback">
+                                     Seleccione una opcion valida
+                                </div>
+                            </div>
+                          </div>
+
+
+                       
+
+                        <div class="form-group">
+                          <div class="form-check">
+                            <input class="form-check-input" style= "width: auto"type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                              Acepta las condiciones
+                            </label>
+                            <div class="invalid-feedback">
+                              No acepta
+                            </div>
+                          </div>
+                        </div>
+
+
+                        
+                        <div class="modal-footer">
+                          <button type="button" style= "width: auto" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                          <button type="submit"  style= "width: auto" class="btn btn-primary">Registrar</button>
+                      </div>
+                  </div>
+                  </form> 
+              </div>    
+      </div>>
+
+
+
+         <!--fin formulario-->
+    
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="JQuery/jquery-3.5.1.slim.min.js"></script>
+    <script src="bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js" ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
